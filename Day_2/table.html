@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    table, th, td {
+        border: 2px solid;
+        border-collapse: collapse;
+    }
+    tfoot {
+        background-color: green;
+    }
+    th{
+        background-color: red;
+    }
+
+</style>
+<body>
+    <h1> Creating Table</h1>
+    <!-- table Tag -->
+    <table>
+        <tr>
+            <th>Months</th>
+            <th>Savings</th>
+        </tr>
+        <tr style="background-color: white;">
+            <td>Janbary</td>
+            <td>1000</td>
+        </tr>
+        <tr style="background-color: white;">
+            <td>february</td>
+            <td>1500</td>
+        </tr>
+        <tr style="background-color: white;">
+            <td>march</td>
+            <td>2000</td>
+        </tr>
+        <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>3500</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
