@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* emelemt selector */
+        table, tr, th,td {
+            border: 10px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            background-color: aqua;
+        }
+        th{
+            color:aliceblue;
+            background-color: gray;
+        
+        }
+        /* class selector */
+        .one{
+            color:green;
+        }
+        .two{
+            color:red;
+        }
+        .small{
+            font-size: small;
+        }
+        .large{
+            font-size: large;
+        }
+        /* Id Selector */
+        
+    </style>
+</head>
+<body>
+    <!-- Class selector -->
+    <h2> Class Selector</h2>
+    <h1 class="small">
+        An article is a word that is used to indicate that a noun is a noun without describing it
+    </h1>
+    <h2 class="small">
+        An article is a word that is used to indicate that a noun is a noun without describing it
+    </h2>
+    <h3 class="small">
+        An article is a word that is used to indicate that a noun is a noun without describing it
+    </h3>
+    <br>
+    <h4 class="large">
+        in the sentence Nick bought a dog, the article a indicates that the word dog is a
+    </h4>
+    <h5 class="large">
+        in the sentence Nick bought a dog, the article a indicates that the word dog is a
+    </h5>
+    <h6 class="large">
+        in the sentence Nick bought a dog, the article a indicates that the word dog is a
+    </h6>
+    <br>
+    <p class="one">
+        Pratice a element selector in css (Paragraph First)
+    </p>
+    <p class="one">
+        Pratice a element selector in css (Paragraph Second)
+    </p>
+    <p class="two">
+        Pratice a element selector in css (Paragraph Third)
+    </p>
+
+    <!-- changing table propertice using element selector -->
+    <h2> Element Selectors</h2>
+    <table>
+        <tr>
+            <th>Name </th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+        <tr>
+            <td>Abc</td>
+            <td>19</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>xyz</td>
+            <td>20</td>
+            <td>FeMale</td>
+        </tr>
+    </table> 
+    <br>
+    <!-- ID selector -->
+    <form action="" id="form">
+        <label for="name">Name: </label>
+        <input type="text">
+    </form>
+</body>
+</html>
