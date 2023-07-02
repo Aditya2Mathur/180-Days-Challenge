@@ -76,10 +76,9 @@ th {
 }
 
 .table {
-    background-color: aqua;
+    background-color: white;
     padding-left: 650px;
-
-
+    
 }
 
 .nav {
@@ -168,39 +167,4 @@ div {
 .but:hover {
     font-size: 15px;
 
-}
-
-/* Day 5 CSS */
-#linear1 {
-    background-image: linear-gradient(to left, blue, lightblue);
-}
-
-#linear2 {
-    background-image: linear-gradient(to bottom, orange, white, green);
-}
-
-#linear5 {
-    background-image: linear-gradient(to bottom left, rgb(255, 0, 0), blue, rgb(21, 255, 0));
-}
-
-#linear6 {
-    background-image: linear-gradient(132deg, blue, lightblue);
-}
-
-#linear7 {
-    background-image: linear-gradient(green, blue, lightblue);
-}
-
-#linear8 {
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 255, 1));
-}
-
-/*  End Linear Gradiants */
-/* Radials Gradients Start */
-#radial1 {
-    background-image: radial-gradient(darkblue 15%, rgb(30, 165, 210) 35%, lightblue 50%);
-}
-
-#radial2 {
-    background-image: radial-gradient(circle, darkblue, rgb(30, 165, 210), lightblue);
 }
