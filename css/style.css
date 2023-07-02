@@ -1,33 +1,206 @@
-<style>
-html{
-scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
-.nav{
+
+.nav {
     padding-right: 50px;
     text-align: center;
     text-decoration: none;
     color: whitesmoke;
     text-shadow: 3px 3px #111;
 
-    
+
 }
-nav{
+
+/* Pracrtice  */
+nav {
     background-color: brown;
     padding-left: 300px;
     padding-right: 300px;
 }
-#go{
-    padding-left: 10px;
-    color: white;
+
+nav a:hover {
+    color: aqua;
+    font-size: 20px;
 }
-.heading{
+
+#go:hover {
+    padding-left: 10px;
+    color: aqua;
+}
+
+.heading {
     text-align: center;
     font-style: italic;
     text-shadow: 2px 2px #4444;
     background-color: rgb(151, 117, 117);
 }
-.contact{
+
+.contact {
     text-decoration: none;
     font-style: italic;
     color: brown;
+}
+
+/* Selector CSS */
+/* emelemt selector */
+table,
+tr,
+th,
+td {
+    border: 10px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: aqua;
+}
+
+th {
+    color: aliceblue;
+    background-color: gray;
+
+}
+
+/* class selector */
+.one {
+    color: green;
+}
+
+.two {
+    color: red;
+}
+
+.small {
+    font-size: small;
+}
+
+.table {
+    background-color: aqua;
+    padding-left: 650px;
+
+
+}
+
+.nav {
+    padding-right: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 3px 3px #111;
+
+
+}
+
+nav {
+    background-color: rgb(165, 42, 42);
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+#go:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+
+}
+
+#home:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#contact:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#project:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#team:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Id Selector */
+.form {
+    margin: 10px;
+    background-color: rgba(165, 42, 42, 0.478);
+    backface-visibility: 50%;
+
+}
+
+form button {
+    border-radius: 10px;
+    box-sizing: inherit;
+    background-color: #04AA6D;
+    padding: 14px 28px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Card CSS */
+div {
+    height: 400px;
+    width: 225px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Rubik, sans-serif;
+    padding: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.but {
+    background-color: rgba(240, 248, 255, 0);
+    color: white;
+}
+
+.but:hover {
+    font-size: 15px;
+
+}
+
+/* Day 5 CSS */
+#linear1 {
+    background-image: linear-gradient(to left, blue, lightblue);
+}
+
+#linear2 {
+    background-image: linear-gradient(to bottom, orange, white, green);
+}
+
+#linear5 {
+    background-image: linear-gradient(to bottom left, rgb(255, 0, 0), blue, rgb(21, 255, 0));
+}
+
+#linear6 {
+    background-image: linear-gradient(132deg, blue, lightblue);
+}
+
+#linear7 {
+    background-image: linear-gradient(green, blue, lightblue);
+}
+
+#linear8 {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 255, 1));
+}
+
+/*  End Linear Gradiants */
+/* Radials Gradients Start */
+#radial1 {
+    background-image: radial-gradient(darkblue 15%, rgb(30, 165, 210) 35%, lightblue 50%);
+}
+
+#radial2 {
+    background-image: radial-gradient(circle, darkblue, rgb(30, 165, 210), lightblue);
 }
