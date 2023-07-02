@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+
     <style>
         html{
             text-align: center;
@@ -19,6 +19,109 @@
             font-size: 15px;
             size: 20px;
         }
+        * Selector CSS */
+/* emelemt selector */
+table,
+tr,
+th,
+td {
+    border: 10px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: aqua;
+}
+
+th {
+    color: aliceblue;
+    background-color: gray;
+
+}
+
+/* class selector */
+.one {
+    color: green;
+}
+
+.two {
+    color: red;
+}
+
+.small {
+    font-size: small;
+}
+
+.table {
+    background-color: white;
+    padding-left: 650px;
+    
+}
+
+.nav {
+    padding-right: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 3px 3px #111;
+
+
+}
+
+nav {
+    background-color: rgb(165, 42, 42);
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+#go:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+
+}
+
+#home:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#contact:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#project:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+#team:hover {
+    padding-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Id Selector */
+.form {
+    margin: 10px;
+    background-color: rgba(165, 42, 42, 0.478);
+    backface-visibility: 50%;
+
+}
+
+form button {
+    border-radius: 10px;
+    box-sizing: inherit;
+    background-color: #04AA6D;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    background-size: contain;
+}
     
     </style>
 </head>
@@ -67,7 +170,7 @@
     <h2 style="text-align: center;"> Element Selectors</h2>
     <div class="table">
        
-    <table>
+    <table style="padding-left: 40px;">
         <tr>
             <th>Name </th>
             <th>Age</th>
