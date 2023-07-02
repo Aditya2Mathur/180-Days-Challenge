@@ -9,92 +9,22 @@
         html{
             text-align: center;
         }
-      
-        /* emelemt selector */
-        table, tr, th,td {
-            border: 10px solid black;
-            border-collapse: collapse;
+        #button:hover{
+            color: antiquewhite;
+            font-size: 18px;
+            size: 40px;
         }
-        td{
-            background-color: aqua;
-        }
-        th{
-            color:aliceblue;
-            background-color: gray;
-        
-        }
-        /* class selector */
-        .one{
-            color:green;
-        }
-        .two{
-            color:red;
-        }
-        .small{
-            font-size: small;
-        }
-        .table{
-          background-color: aqua;
-          padding-left: 650px;
-          
-
-        }
-            .nav{
-        padding-right: 50px;
-        text-align: center;
-        text-decoration: none;
-        color: whitesmoke;
-        text-shadow: 3px 3px #111;
-
-        
-            }
-        nav{
-        background-color: rgb(165, 42, 42);
-        padding-left: 300px;
-        padding-right: 300px;
-    }
-    #go:hover{
-        padding-left: 10px;
-        color: white;
-        font-size:  20px;
-    }
-    #home:hover{
-        padding-left: 10px;
-        color: white;
-        font-size:  20px;
-    }
-    #contact:hover{
-        padding-left: 10px;
-        color: white;
-        font-size:  20px;
-    }
-    #project:hover{
-        padding-left: 10px;
-        color: white;
-        font-size:  20px;
-    }
-    #team:hover{
-        padding-left: 10px;
-        color: white;
-        font-size:  20px;
-    }
-        /* Id Selector */
-    .form{
-        margin: 10px;
-        background-color: rgba(165, 42, 42, 0.478);
-        backface-visibility: 50%;
-        
-    }
+    
     </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="nav" id="home">HOME</a>
-        <a href=""class="nav" id="team">OUR TEAM</a>
-        <a href=""class="nav" id="project">PROJECTS</a>
+        <a href="#"class="nav" id="team">OUR TEAM</a>
+        <a href="#"class="nav" id="project">PROJECTS</a>
         <a href="#con"class="nav" id="contact">CONTACT</a>
         <input type="text" name="search" value="Search" id="search">
-        <a href="0" class="nav" id="go">GO!</a>
+        <a href="#" class="nav" id="go">GO!</a>
     </nav>
     <!-- Class selector -->
     <h2 id="class" class="heading" style="text-align: center;"> Class Selector</h2>
@@ -162,7 +92,7 @@
         <br>
         <label for="password" class="form">Password:</label>
         <input type="password" name="password"><br>
-        <button type="submit"class="form" id="button" style="margin-left: 50px;">Sunmit</button>
+        <button type="submit"class="form" id="button" style="margin-left: 50px;">Submit</button>
     </form>
    </div>
 </body>
