@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
+        html{
+            text-align: center;
+        }
+      
         /* emelemt selector */
         table, tr, th,td {
             border: 10px solid black;
@@ -28,17 +33,72 @@
         .small{
             font-size: small;
         }
-        .large{
-            font-size: large;
+        .table{
+          background-color: aqua;
+          padding-left: 650px;
+          
+
         }
-        /* Id Selector */
+            .nav{
+        padding-right: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: whitesmoke;
+        text-shadow: 3px 3px #111;
+
         
+            }
+        nav{
+        background-color: rgb(165, 42, 42);
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+    #go:hover{
+        padding-left: 10px;
+        color: white;
+        font-size:  20px;
+    }
+    #home:hover{
+        padding-left: 10px;
+        color: white;
+        font-size:  20px;
+    }
+    #contact:hover{
+        padding-left: 10px;
+        color: white;
+        font-size:  20px;
+    }
+    #project:hover{
+        padding-left: 10px;
+        color: white;
+        font-size:  20px;
+    }
+    #team:hover{
+        padding-left: 10px;
+        color: white;
+        font-size:  20px;
+    }
+        /* Id Selector */
+    .form{
+        margin: 10px;
+        background-color: rgba(165, 42, 42, 0.478);
+        backface-visibility: 50%;
+        
+    }
     </style>
 </head>
 <body>
+    <nav>
+        <a href="index.html" class="nav" id="home">HOME</a>
+        <a href=""class="nav" id="team">OUR TEAM</a>
+        <a href=""class="nav" id="project">PROJECTS</a>
+        <a href="#con"class="nav" id="contact">CONTACT</a>
+        <input type="text" name="search" value="Search" id="search">
+        <a href="0" class="nav" id="go">GO!</a>
+    </nav>
     <!-- Class selector -->
-    <h2> Class Selector</h2>
-    <h1 class="small">
+    <h2 id="class" class="heading" style="text-align: center;"> Class Selector</h2>
+    <h1  class="small">
         An article is a word that is used to indicate that a noun is a noun without describing it
     </h1>
     <h2 class="small">
@@ -69,7 +129,9 @@
     </p>
 
     <!-- changing table propertice using element selector -->
-    <h2> Element Selectors</h2>
+    <h2 style="text-align: center;"> Element Selectors</h2>
+    <div class="table">
+       
     <table>
         <tr>
             <th>Name </th>
@@ -87,11 +149,21 @@
             <td>FeMale</td>
         </tr>
     </table> 
+    </div>
     <br>
     <!-- ID selector -->
-    <form action="" id="form">
-        <label for="name">Name: </label>
-        <input type="text">
+   <div class="form">
+    <form action="thank.html" id="form">
+        &ensp;&ensp;
+        <label for="name" class="form">Name: </label>
+        <input type="text"><br> &ensp;&ensp;
+        <label for="email" class="form">Email:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password" class="form">Password:</label>
+        <input type="password" name="password"><br>
+        <button type="submit"class="form" id="button" style="margin-left: 50px;">Sunmit</button>
     </form>
+   </div>
 </body>
 </html>
