@@ -1,0 +1,24 @@
+table, th, td, th, td{
+    border: 2px solid;
+    border-collapse: collapse;
+}
+tfoot {
+    background-color: green;
+}
+th{
+    background-color: red;
+}
+#day{
+    text-align: center;
+}
+<style>
+table,tr,th,td {
+    border: 2px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+caption{
+    caption-side: bottom;
+    text-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+}
