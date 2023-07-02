@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        div{
+            margin: 5px;
+            display: inline-block;
+        }
+        #sec1{
+            border: 2px solid darkblue;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            
+        }
+        #sec2{
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            overflow: visible;
+        }
+        #sec3{
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            overflow: scroll;
+        }
+        .sec4{
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="sec1">
+        <h2>Min-Height Visible Overflow</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quam, maxime voluptatem, fuga
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, molestiae? In magnam aspernatur nisi
+            reprehenderit, deleniti placeat ex quo nemo harum libero, aliquam, repudiandae quae! Nobis quisquam, aut
+            nostrum consectetur commodi, ullam culpa corporis laborum corrupti eligendi nulla magnam pariatur
+            perferendis! Maxime dolore dignissimos earum vel autem corrupti explicabo sunt.
+        </p>
+    </div>
+    <div id="sec2">
+        <h2>Max-Height with Visible Overflow</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quam, maxime voluptatem, fuga
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, molestiae? In magnam aspernatur nisi
+            reprehenderit, deleniti placeat ex quo nemo harum libero, aliquam, repudiandae quae! Nobis quisquam, aut
+            nostrum consectetur commodi, ullam culpa corporis laborum corrupti eligendi nulla magnam pariatur
+            perferendis! Maxime dolore dignissimos earum vel autem corrupti explicabo sunt.
+        </p>
+    </div>
+    <div id="sec3">
+        <h2> Scroll Overflow</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quam, maxime voluptatem, fuga
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, molestiae? In magnam aspernatur nisi
+            reprehenderit, deleniti placeat ex quo nemo harum libero, aliquam, repudiandae quae! Nobis quisquam, aut
+            nostrum consectetur commodi, ullam culpa corporis laborum corrupti eligendi nulla magnam pariatur
+            perferendis! Maxime dolore dignissimos earum vel autem corrupti explicabo sunt.
+        </p>
+    </div><br>
+        <div >
+    <div class="sec4"> <h2 >Auto Overflow: (context is less than box) </h2>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quam, maxime voluptatem, fuga
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </p>
+        </div>
+        
+        <div class="sec4">
+            <h2 >Auto Overflow:(context is more than box)  </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci quam, maxime voluptatem, fuga
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, molestiae? In magnam aspernatur nisi
+                reprehenderit, deleniti placeat ex quo nemo harum libero, aliquam, repudiandae quae! Nobis quisquam, aut
+                nostrum consectetur commodi, ullam culpa corporis laborum corrupti eligendi nulla magnam pariatur
+                perferendis! Maxime dolore dignissimos earum vel autem corrupti explicabo sunt.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
