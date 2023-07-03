@@ -2,54 +2,148 @@ html {
     scroll-behavior: smooth;
 }
 
+#nav {
+    background-image: linear-gradient(to right, darkgray, rgba(254, 247, 247, 0.758), darkgray);
+    text-align: center;
+}
+
 .nav {
-    padding-right: 50px;
-    text-align: center;
+    color: aliceblue;
     text-decoration: none;
-    color: whitesmoke;
-    text-shadow: 3px 3px #111;
-
-
+    padding: 20px;
+    color: black;
 }
 
-
-/* Id Selector */
-.form {
-    margin: 10px;
-    background-color: rgba(165, 42, 42, 0.478);
-    backface-visibility: 50%;
-
-}
-
-form button {
+nav a:hover {
+    color: yellowgreen;
+    font-size: 18px;
     border-radius: 10px;
-    box-sizing: inherit;
-    background-color: #04AA6D;
-    padding: 14px 28px;
-    cursor: pointer;
+
+}
+
+#go:hover {
+    padding-left: 10px;
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.heading {
     text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px #4444;
+    background-image: linear-gradient(to right, darkgray, rgba(226, 219, 219, 0.758), rgba(226, 225, 225, 0.507));
+    color: yellowgreen;
 }
 
-/* Card CSS */
-div {
-    height: 400px;
-    width: 225px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-family: Rubik, sans-serif;
-    padding: auto;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
+.contact {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+
+.hvr:hover {
+    font-variant: small-caps;
+}
+
+#leftSide {
+    width: 48%;
+    display: inline-block;
+}
+
+#rightSide {
+    width: 48%;
 
 }
 
-.but {
-    background-color: rgba(240, 248, 255, 0);
-    color: white;
+#cc {
+    background-image: linear-gradient(to left, darkgray, rgba(204, 196, 196, 0.758), rgba(242, 234, 234, 0.507));
+    text-shadow: 3px 3px 3px white;
+    color: yellowgreen;
+    font-weight: bold;
 }
 
-.but:hover {
-    font-size: 15px;
+.clg {
+    background-image: linear-gradient(to right, lightgray, gray, white);
+    border: 2px solid black;
+    margin-top: 5px;
+    box-shadow: 3px 3px 3px brown;
+
+}
+
+.ecc {
+    background-image: linear-gradient(to left, darkgray, rgba(204, 196, 196, 0.758), rgba(242, 234, 234, 0.507));
+}
+
+.display {
+    display: inline-block;
+}
+
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search {
+    height: 20px;
+    width: 25px;
+    border-style: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: darkgray;
+    padding-right: 40px;
+    color: black;
+    padding-left: 10px;
+    font-weight: 100;
+    margin-bottom: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input-search::placeholder {
+    color: rgb(88, 128, 8);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    right: 0px;
+    color: black;
+    background-color: transparent;
+    pointer-events: painted;
+}
+.btn-search:hover{
+    color: yellowgreen;
+}
+
+.btn-search:focus~.input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid yellowgreen;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.notes{
+    text-decoration: none;
+    color: rgb(235, 230, 230);
 
 }
