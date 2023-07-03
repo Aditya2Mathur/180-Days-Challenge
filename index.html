@@ -9,88 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
     <!-- Adding  -->
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        #nav {
-            background-image: linear-gradient(to right, darkgray,rgba(254, 247, 247, 0.758),darkgray);
-            text-align: center;
-        }
-
-        .nav {
-            color: aliceblue;
-            text-decoration: none;
-            padding: 20px;
-            color: black;
-        }
-
-        nav a:hover {
-            color: yellowgreen;
-            font-size: 18px;
-            border-radius: 10px;
-            
-        }
-
-        #go:hover {
-            padding-left: 10px;
-            color: yellowgreen;
-            font-weight: bold;
-        }
-
-        .heading {
-            text-align: center;
-            font-style: italic;
-            text-shadow: 2px 2px #4444;
-             background-image: linear-gradient(to right, darkgray,rgba(226, 219, 219, 0.758),rgba(226, 225, 225, 0.507));
-             color: yellowgreen;
-        }
-
-        .contact {
-            text-decoration: none;
-            font-style: italic;
-            color: rgb(0, 0, 0);
-        }
-
-        .hvr:hover {
-            font-variant: small-caps;
-        }
-
-        #leftSide {
-            width: 48%;
-            display: inline-block;
-        }
-
-        #rightSide {
-            width: 48%;
-
-        }
-
-        #cc {
-            background-image: linear-gradient(to left, darkgray,rgba(204, 196, 196, 0.758),rgba(242, 234, 234, 0.507));
-            text-shadow: 3px 3px 3px white;
-            color: yellowgreen;
-            font-weight: bold;
-        }
-
-        .clg {
-            background-image: linear-gradient(to right, lightgray,gray,white);
-            border: 2px solid black;
-            margin-top: 5px;
-            box-shadow: 3px 3px 3px brown;
-
-        }
-
-        .ecc {
-            background-image: linear-gradient(to left, darkgray,rgba(204, 196, 196, 0.758),rgba(242, 234, 234, 0.507));
-        }
-
-        .display {
-            display: inline-block;
-        }
+      
     </style>
 </head>
 <!-- body Start -->
@@ -101,10 +24,10 @@
 
         <a href="index.html" class="nav">HOME</a>
         <a href="#days" class="nav btn-1">Days</a>
-        <a href="Day_2/Project1.html" class="nav btn-1">Notes</a>
-        <a href="#con" class="nav btn-1"></a>
-        <input type="search" name="search" placeholder="Search" id="input">
-        <a href="0" class="nav" id="go" ><b>Go!</b></a>
+        <a href="Day_2/Project1.html" class="nav btn-1">Project</a>
+        <a href="#con" class="nav btn-1">Contact</a>
+        <input type="text" class="input-search" placeholder="Type to Search...">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
 
     </nav>
     <div>
@@ -166,28 +89,28 @@
             <h2 id="bio" class="heading" style="text-transform: uppercase;">Content </h2>
             <div class="display">
                 <ul>
-                    <li><a href="http://127.0.0.1:5500/Day_1/index.html">Day - 1</a>
+                    <li>Day - 1
                         <ul>
                             <li><b>Content:</b> Heading, Paragraph, list & Meta Tags</li>
-                            <li> <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf">Notes</a> day -1</li>
-                            <li><a href="http://127.0.0.1:5500/Day_1/index.html">Paragraph & Heading </a></li>
+                            <li>Day - 1 <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf" target="_blank" class="notes"> Notes</a></li>
+                            <li>Project: <a href="http://127.0.0.1:5500/Day_1/index.html"  class="notes">Paragraph & Heading </a></li>
                         </ul>
                     </li>
                     </ol>
+                </ul>
             </div>
             <!-- Day 1 End -->
             <div class="display">
                 <ul>
-                    <li><a href="http://127.0.0.1:5500/Day_2/index.html">Day - 2</a> </li>
-                        <ul>
-                            <li><b>Content:</b> Form tag, Table Tag, Day-1 Practice, Span table tag, </li>
-                            <li> day -1: <a href="http://127.0.0.1:5500/Day_2/2DaysNotes.pdf">Notes</a></li>
-                            <li> Projects:<a href="http://127.0.0.1:5500/Day_2/Project1.html">Simple HTML Project </a>
-                                <br><a href="http://127.0.0.1:5500/Day_2/formPractice.html">Form Practice</a>
-                                <br><a href="Day_2/table.html">Span & table</a>
-                            </li>
-                        </ul>
-                   
+                    <li>Day - 2 </li>
+                    <ul>
+                        <li><b>Content:</b> Form tag, Table Tag, Day-1 Practice, Span table tag, </li>
+                        <li> day -1: <a href="http://127.0.0.1:5500/Day_2/2DaysNotes.pdf" target="_blank" class="notes">Notes</a></li>
+                        <li> Projects: <a href="http://127.0.0.1:5500/Day_2/Project1.html" class="notes">Simple HTML Project </a>
+                      <a href="http://127.0.0.1:5500/Day_2/formPractice.html" class="notes">Form Practice</a>
+                            <a href="Day_2/table.html" class="notes">Span & table</a>
+                        </li>
+                    </ul> 
                 </ul>
             </div>
             <!-- Day 2 End -->
@@ -196,8 +119,9 @@
                     <li>Day - 3
                         <ul>
                             <li><b>Content:</b> Update project 1 divided into section, create navbar and bookmark</li>
-                            <li> <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf">Notes</a> day -3</li>
-                            <li><a href="http://127.0.0.1:5500/Day_3/index.html"><b>Project: </b>Update Project 1</a></li>
+                            <li>day - 3: <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf" class="notes" target="_blank">Notes</a></li>
+                            <li>Project: <a href="http://127.0.0.1:5500/Day_3/index.html" class="notes"><b></b>Update Project 1</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -210,9 +134,8 @@
                             <li><b>Content:</b>CSS Basics, Font Properties, Text <br>Propertires, Selector, Specificity,
                                 Box Model, Units
                             </li>
-                            <li> <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf">Notes</a> day -1</li>
-                            <li><a href="http://127.0.0.1:5500/Day_1/index.html">Paragraph & Heading </a></li>
-                            <li><a href="http://127.0.0.1:5500/Day_1/index.html">Paragraph & Heading </a></li>
+                            <li > Day - 4: <a href="notes/Day 4 Notes.pdf" class="notes" target="_blank">Notes</a></li>
+                            <li >Project: <a href="http://127.0.0.1:5500/Day_1/index.html" class="notes">Paragraph & Heading </a></li>
                         </ul>
                     </li>
                 </ul>
@@ -223,8 +146,8 @@
                     <li>Day - 5
                         <ul>
                             <li><b>Content:</b> Heading, Paragraph, list & Meta Tags</li>
-                            <li> <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf">Notes</a> day -1</li>
-                            <li><a href="http://127.0.0.1:5500/Day_1/index.html">Paragraph & Heading </a></li>
+                            <li>Day - 5: <a href="http://127.0.0.1:5500/notes/DSC_0411~2.pdf" target="_blank" class="notes">Notes</a></li>
+                            <li>Project: <a href="http://127.0.0.1:5500/Day_1/index.html" class="notes">Paragraph & Heading </a></li>
                         </ul>
                     </li>
                 </ul>
