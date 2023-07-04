@@ -1,0 +1,54 @@
+.outer{
+    height: 2000px;
+    width: auto;
+    background-color: rgba(165, 42, 42, 0.458);
+}
+.inter{
+    height: 200px;
+    width: 150px;
+    background-color: aqua;
+    display: inline-block;
+    margin: 10px;
+}
+#a{
+    position: relative;
+    top: 29px;
+}
+#b{
+    position: absolute;
+    left: 39px;
+    top: 200px;
+}
+#c{
+    position: fixed;
+    top: 10px;
+}
+#d{
+    position: sticky;
+    top: 20px;
+    left: 400px;
+}
+/* 3D Transforms */
+div{
+    height: 150px;
+    width: 100px;
+    background-color: rgb(164, 113, 51);
+}
+.Transforms{
+    transform: perspective(100px) translateZ(-25px);
+}
+.rotate{
+    transform: rotateX(125deg) rotateZ(100deg) ;
+}
+.scale{
+    transform: scaleZ(100deg) scaleX(205) scaleY(127deg);
+}
+/*  Flex Box */
+.container{
+    height: 350px;
+    border: 2px solid black;
+    width: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+
+}
