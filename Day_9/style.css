@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+.container{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+#background{
+    transform: translateZ(-50px) scale(6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    background-size: cover;
+
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8rem;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 10px gray;
+    background-size: cover;
+    
+}
+.clgHeading{
+    background-image: linear-gradient(to right, black , lightblue, rgba(0, 0, 0, 0.504));
+    color: white;
+    padding: 5rem 0;
+}
+.challenge{
+    padding: 0 10rem;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #A4A7AC;
+}
+
+.bg1{
+    background-image: url(bg1.jpg);
+}
+.bg2{
+    background-image: url(bg2.jpg);
+}
+.bg3{
+    background-image: url(bg3.jpg);
+}
+.bg{
+    background-position: center;
+    width: 100%;
+    height: 480px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 290px;
+
+}
+.text{
+    padding:0 10rem;
+    margin: 0 5rem;
+    font-size: 1rem;
+    min-height: auto;
+
+}
+
+span{
+   background-image: url(bg1.jpg);
+    color: rgba(0, 0, 0, 1);
+}
