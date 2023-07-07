@@ -47,9 +47,10 @@ h1{
     padding: 5rem 0;
 }
 .challenge{
-    padding: 0 10rem;
+    /* padding: 0 10rem; */
     font-size: 3rem;
     text-shadow: 2px 2px 4px #A4A7AC;
+    text-align: center;
 }
 
 .bg1{
@@ -73,14 +74,14 @@ h1{
 
 }
 .text{
-    padding:0 10rem;
+    padding: 10px;
     margin: 0 5rem;
     font-size: 1rem;
     min-height: auto;
-
 }
 
 span{
    background-image: url(bg1.jpg);
     color: rgba(0, 0, 0, 1);
 }
+
