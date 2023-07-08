@@ -1,0 +1,47 @@
+.container{
+    width: 700px;
+    height: 700px;
+    display: grid;
+    background-color: red;
+    border: 1px solid black;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box{
+    /* width: 100px;
+    height: 100px; */
+    background-color: aqua;
+    /* grid-column-start: 3; */
+    grid-row-end: 2;
+}
+/* web design css */
+.container1{
+    width: auto;
+    border: 1px solid blue;
+    min-height: 600px;
+    background-color: red;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 350px 650px;
+
+    grid-template-areas:
+    "hd hd hd hd hd hd"
+    "sd main main main main main"
+    "ft ft ft ft ft ft";
+}
+.box1{grid-area: hd;
+    height: 40px;
+}
+.box2{grid-area: sd;
+height: 700px;
+}
+.box3{grid-area: main;}
+.box4{grid-area: ft;
+height: 300px;
+background-color: yellowgreen;
+}
+
+.box{
+    border: 4px solid brown;
+}
