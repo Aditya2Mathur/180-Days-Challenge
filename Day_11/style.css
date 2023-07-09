@@ -1,0 +1,34 @@
+.container{
+    height: auto;
+    width: auto;
+    background-color: rgb(206, 104, 104);
+    display: grid;
+    border: 10px solid rgb(199, 73, 73);
+    grid-template-areas: 
+    
+    "nav nav nav nav nav nav"
+    "sd ct ct ct ct ct"
+    "sd ct ct ct ct ct"
+    "ft ft ft ft ft ft";
+
+}
+
+.nav{grid-area: nav;}
+.nav{
+    height: 40px;
+    background-color: black;
+    color: aliceblue;
+}
+.sd{grid-area: sd;}
+.sd{
+    background-color: aquamarine;
+    height: 400px;
+}
+.ct{grid-area: ct;}
+.ct{
+    background-color: azure;
+}
+.ft{grid-area: ft;}
+.ft{
+    background-color: beige;
+}
