@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Design</title>
+    <style>
+        .container{
+            display: grid;
+            height: 700px;
+            width: 700px;
+            grid-template-columns: 14rem 1fr;
+            grid-template-rows: 40px 1fr 100px;
+            border: 1px solid red;
+            grid-template-areas: 
+            "hd hd"
+            "sd ctn"
+            "ftr ftr";
+            grid-gap: 10px;
+        }
+        .hd{grid-area: hd;}
+        .sd{grid-area: sd;}
+        .ctn{grid-area: ctn;}
+        .ftr{
+            grid-area: ftr;
+        }
+        .hd{
+            background-color: blue;
+        }
+        .sd{
+            background-color: aquamarine;
+        }
+        .ctn{
+            background-color: bisque;
+        }
+        .ftr{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <box class="hd">header</box>
+        <box class="sd">side</box>
+        <box class="ctn">content</box>
+        <box class="ftr">footer</box>
+    </div>
+</body>
+</html>
