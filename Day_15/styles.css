@@ -95,7 +95,7 @@ a:hover{
 
   color: white;
 }
-
+/* hero section start */
 .hero-section{
     position:relative;
     display:flex;
@@ -107,17 +107,7 @@ a:hover{
     padding: 0 1rem;
     padding-bottom: 8rem;
 }
-@media (min-width: 350px) and (max-width: 500px) {
-  .hero-section{
-    position:relative;
-    display:flex;
-    display: inline-block;
-    gap: 10em;
-    margin: 4rem auto;
-    padding: 0 1rem;
-    padding-bottom: 8rem;
-}
-}
+
 .faded-text{
     position:absolute;
     user-select:none;
@@ -139,9 +129,18 @@ a:hover{
 }
 
 .hero-section-heading{
-    font-size: 35px;
+    font-size: 2.1875em;
     color: #343d68;
     font-weight: 500;
+}
+.AM{
+  color: white;
+  font-weight: 500;
+}
+.hl{
+  font-size:50px;
+  font-weight: bold;
+  line-height:3rem;
 }
 
 .role{
@@ -198,7 +197,6 @@ a:hover{
   .hero-section-right{
     position:relative;
   }
-
   .absolute{
     position:absolute;
   }
@@ -208,8 +206,8 @@ a:hover{
     filter:grayscale(1);
     transition:all 1s;
     animation: scaleImage 5s linear infinite;
-    width: 345px;
-    height: 390px;
+    width: 100%;
+    height: auto;
   }
 
   .user-image img{
@@ -336,22 +334,8 @@ a:hover{
         transform: rotate(180deg);
     }
   }
-  @media (max-width: 500px) {
-    .navbar{
-      /* width: 400px; */
-      display: flex;
-      display:block ;
-      align-items: stretch;
-    }
-    .logo-container{
-      align-items: center;
-    }
-    .container{
-      display: flex;
-      display: block;
-    }
-  }
-
+ 
+/* Project Section Start */
   .project-section{
     background-color: #c7c9cdd2;
     margin-top:4rem;
@@ -412,32 +396,6 @@ a:hover{
   .project-card:hover::before{
     transform:scaleX(1);
   }
-
-  .project-number{
-    position:absolute;
-    font-size:200px;
-    font-weight:600;
-    color:white;
-    z-index:10;
-    /* display:none; */
-    opacity: 0;
-  }
-
-  .project-card:hover .project-number{
-    /* display:block; */
-    opacity: 1;
-  }
-
-  .project-number-right{
-    right:-40px;
-    top:-45px;
-  }
-
-  .project-number-left{
-    left:-40px;
-    top:-45px;
-  }
-
   .project-content{
     position:absolute;
     display:flex;
@@ -525,63 +483,6 @@ a:hover{
     background-image: url(./images/projects/Project4.png);
   }
 
-  @media (max-width:1300px) {
-    .page-header {
-      padding-top: 30px;
-      color: var(--bgOrange);
-      text-align: center;
-      font-size: 40px;
-    }
-    .project-container {
-      padding: 5px;
-      margin: 10px;
-      gap: 60px;
-    }
-    .project-card {
-      width: 100%;
-      height: 300px;
-    }
-    .project-card {
-      background-size: cover;
-      background-position: center;
-    }
-    .project-content {
-      scale: 0.5;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
-    .project-content-left {
-      left: 0;
-    }
-    .project-heading {
-      font-size: 40px;
-      width: 100%;
-    }
-    .project-sub-heading {
-      width: 100%;
-    }
-    #project2 {
-      margin-left: 0;
-    }
-    #project4 {
-      margin-left: 0;
-    }
-    .project-skill-container {
-      width: 100%;
-    }
-    .project-skill {
-      width: 35px;
-    }
-    .project-card:hover .project-number {
-      display: none;
-    }
-    .project-card:hover .project-content {
-      scale: 0.55;
-    }
-  }
-
   .skills-container{
     position:relative;
     display:flex;
@@ -609,8 +510,8 @@ a:hover{
   position:absolute;
   font-size:12em;
   font-style:bold;
-  color:rgb(231,231,231);
-  bottom:-34.5%;
+  color:#CAC2BA;
+  bottom:-33%;
   right:-5%;
   user-select:none;
   overflow-y:hidden;
@@ -665,10 +566,6 @@ a:hover{
 .contactus-form-container{
   width:100%;
   background-color: #CAC2BA;
-}
-.AM{
-  color: white;
-  font-weight: 500;
 }
 
 .contactus-heading{
