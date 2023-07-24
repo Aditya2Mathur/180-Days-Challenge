@@ -13,6 +13,10 @@
     <title>Document</title>
 </head>
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
     .areocard {
         background-image: url(images/payment-link-icon.svg);
     }
@@ -20,6 +24,25 @@
     .areocard:hover {
         background-image: url(images/features-wave.svg);
         box-shadow: 0 4px 8px 0 rgba(133, 131, 131, 0.2), 0 6px 20px 0 rgba(140, 138, 138, 0.19);
+    }
+
+    .imgMore {
+        animation: 10s infinite linear mooreCompany;
+    }
+
+    @keyframes mooreCompany {
+        0% {
+            top: 0;
+            range: auto;
+        }
+
+        50% {
+            top: -50%
+        }
+
+        100% {
+            top: 0px;
+        }
     }
 </style>
 
@@ -706,21 +729,91 @@
             <!-- background -->
             <div class=" w-10/12 relative pt-4 mx-auto max-w-[1080px]">
                 <img src="images/feature-section1-dottedrows.png" alt=""
-                 class="absolute w-[233px] left-[300px] -top-[6rem] -z-10">
+                    class="absolute w-[233px] left-[300px] -top-[6rem] -z-10">
                 <img src="./images/feature-section1-dottedrows.png" alt=""
-                class="absolute w-[233px] -right-[3.5rem] -top-[6rem] -z-10">
+                    class="absolute w-[233px] -right-[3.5rem] -top-[6rem] -z-10">
                 <!-- item 1  For Text-->
                 <div class=" grid grid-cols-3 gap-x-4 gap-y-10 relative z-10">
                     <div class="relative flex items-center ">
                         <h2 class="text-4xl text-[#02042A]">
-                           <b> New in the <span class="text-[#2B84EA]">Razorpay</span> <br> Product Suite</b>
+                            <b> New in the <span class="text-[#2B84EA]">Razorpay</span> <br> Product Suite</b>
                         </h2>
                     </div>
                     <!-- Card 1 -->
-                    <div class="bg-[url(/images/instant-settlement-bg.svg)]">
+                    <div class="p-6 bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat w-full max-h-[300px] hover:scale-105 cursor-pointer
+                    transition-all duration-200
+                    hover:bg-[url(/images/instant-settlement-bghover.svg)]">
                         <img src="./images/razorpayXicon.svg" alt="">
-                        <h3> Instant Settlements</h3>
-                        <p>Settle your customer payments
+                        <h3 class="text-[#02042A] text-[18px]"><b>Instant Settlements</b></h3>
+                        <p class="font-mullish text-[#A3A4AB] mt-6">Settle your customer payments
+                            within 10 seconds as soon your
+                            account is activated, even during
+                            holidays.</p>
+                        <div class="flex items-center cursor-pointer group">
+                            <a href="#" class="font-mullish font-bold text-lightBlue500 
+                        group-hover:text-grayBlue transition-all duration-200">Know More &#x3e;</a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="p-6 bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat w-full max-h-[300px] hover:scale-105 cursor-pointer
+                    transition-all duration-200
+                    hover:bg-[url(/images/instant-settlement-bghover.svg)]">
+                        <img src="./images/razorpayXicon.svg" alt="">
+                        <h3 class="text-[#02042A] text-[18px]"><b>Instant Settlements</b></h3>
+                        <p class="font-mullish text-[#A3A4AB] mt-6">Settle your customer payments
+                            within 10 seconds as soon your
+                            account is activated, even during
+                            holidays.</p>
+                        <div class="flex items-center cursor-pointer group">
+                            <a href="#" class="font-mullish font-bold text-lightBlue500 
+                        group-hover:text-grayBlue transition-all duration-200">Know More &#x3e;</a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="p-6 bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat w-full max-h-[300px] hover:scale-105 cursor-pointer
+                    transition-all duration-200
+                    hover:bg-[url(/images/instant-settlement-bghover.svg)]">
+                        <img src="./images/razorpayXicon.svg" alt="">
+                        <h3 class="text-[#02042A] text-[18px]"><b>Instant Settlements</b></h3>
+                        <p class="font-mullish text-[#A3A4AB] mt-6">Settle your customer payments
+                            within 10 seconds as soon your
+                            account is activated, even during
+                            holidays.</p>
+                        <div class="flex items-center cursor-pointer group">
+                            <a href="#" class="font-mullish font-bold text-lightBlue500 
+                        group-hover:text-grayBlue transition-all duration-200">Know More &#x3e;</a>
+
+                        </div>
+
+                    </div>
+                    <!-- card 4 -->
+                    <div class="p-6 bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat w-full max-h-[300px] hover:scale-105 cursor-pointer
+                    transition-all duration-200
+                    hover:bg-[url(/images/instant-settlement-bghover.svg)]">
+                        <img src="./images/razorpayXicon.svg" alt="">
+                        <h3 class="text-[#02042A] text-[18px]"><b>Instant Settlements</b></h3>
+                        <p class="font-mullish text-[#A3A4AB] mt-6">Settle your customer payments
+                            within 10 seconds as soon your
+                            account is activated, even during
+                            holidays.</p>
+                        <div class="flex items-center cursor-pointer group">
+                            <a href="#" class="font-mullish font-bold text-lightBlue500 
+                        group-hover:text-grayBlue transition-all duration-200">Know More &#x3e;</a>
+
+                        </div>
+
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="p-6 bg-[url(/images/instant-settlement-bg.svg)] bg-no-repeat w-full max-h-[300px] hover:scale-105 cursor-pointer
+                    transition-all duration-200
+                    hover:bg-[url(/images/instant-settlement-bghover.svg)]">
+                        <img src="./images/razorpayXicon.svg" alt="">
+                        <h3 class="text-[#02042A] text-[18px]"><b>Instant Settlements</b></h3>
+                        <p class="font-mullish text-[#A3A4AB] mt-6">Settle your customer payments
                             within 10 seconds as soon your
                             account is activated, even during
                             holidays.</p>
@@ -734,6 +827,207 @@
                 </div>
             </div>
         </section>
+        <!-- baad me karoga -->
+        <section class="bg-[url(./images/core-features-sectionBg.svg)]">
+            <h1></h1>
+        </section>
+
+        <!-- Brand Section -->
+        <section class="bg-[#F5F8FE] relative pt-40 pb-12 -mt-[200px ] -z-20">
+            <div class="flex w-11/12 relative pt-4 mx-auto gap-28 max-w-[1080px]">
+                <!-- left Section -->
+                <div class="flex flex-col justify-center  max-w-[calc(100%-500px)]">
+                    <h1 class="text-2xl font-mullish font-bold text-deepblue"><b>Join the 50,00,000 businesses using <br>
+                        Razorpay</b></h1>
+                    <div class="w-6 h-1 bg-greenLight  mt-4 mb-6"></div>
+                    <div class="mb-5">
+                        <p class="text-[18px] font-mullish">We make it easier for you to focus on building great products
+                            while we work on simplifying your payments. Become one of us
+                            by joining thousands of our happy users and simplify the online payment experience for your
+                            customers.</p> <br><br>
+                        <p class="text-[18px] font-mullish">Focus on your business while we handle the complexities of
+                            payments for you.</p>
+                    </div>
+                    <div class="flex flex-row items-start space-x-4 w-full">
+                        <button class="bg-lightBlue items-center relative text-white py-[14px] px-[18px] rounded-md 
+                        font-mullish font-bold hover:bg-lightBlue500 translate-all duration-200">Get
+                            Started 
+                            <i class="fa-solid fa-arrow-right "></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- right Section -->
+                <div class="relative w-[500px] h-[500px] overflow-hidden">
+                    <div style="background: linear-gradient(180deg, #f4f8ff, #fff0);"
+                        class="absolute w-full h-[150px] top-0 z-50"></div>
+
+                    <div style="background: linear-gradient(0deg, #f4f8ff, #fff0);"
+                        class="absolute w-full h-[150px] bottom-0 z-50"></div>
+
+                    <img src="/images/comanies.png" alt="" class="w-[500px] absolute h-auto object-cover imgMore">
+                </div>
+            </div>
+        </section>
+
+        <!-- SuperCharge Feature  -->
+        <section class="bg-[url(images/CTABg.svg)] bg-no-repeat bg-cover ">
+           <div class="flex w-11/12 relative pt-28 mx-auto gap-28 max-w-[1080px] ">
+             <!-- left side -->
+             <div class=" text-white inline-block w-[70%]">
+            <h2 class="text-[25px] font-mullish font-bold text-white">Supercharge your business with Razorpay</h2>
+                <div class="w-6 h-1 bg-greenLight items-center mt-2 mb-3"></div>
+                <p class="text-[18px] pb-3">
+                    Sign up now to experience the future of payments and <br>offer your customers the best checkout experience.</p>
+                <div class="grid grid-cols-3 text-[19px]">
+                    <h2><span class="text-greenLight">&#x2713; </span> Quick onboarding</h2>
+                    <h2> <span class="text-greenLight">&#x2713; </span> Access to entire product suite</h2>
+                    <h2><span class="text-greenLight">&#x2713; </span> API access </h2>
+                    <h2><span class="text-greenLight">&#x2713; </span> 24x7 support</h2>
+
+                </div>
+                <div>
+                    <button
+                        class="text-lightblue bg-white mt-12 py-2 px-4 font-mullish rounded-sm hover:text- transition-all duration-200">
+                        Sign Up Now &#8594;</button>
+                </div>
+             </div>
+             <!-- Right Side -->
+             <div class="">
+                <img src="./images/ctaImg.svg" alt="">
+             </div>
+           </div>
+        </section>
+        <!-- footer Section  -->
+        <footer>
+            <div class="flex w-11/12 relative pt-28 mx-auto gap-28 max-w-[1080px] ">
+                <!-- Row 1 -->
+                <div>
+                    <img src="" alt="">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div>
+                    <div class="div">
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div class="div">
+                        <h2>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                            <a href=""></a>
+                        </h2>
+                    </div>
+                    <div class="div">
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div class="div">
+                        <h1></h1>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <!-- Row 3 -->
+                <div>
+                    <div>
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div>
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div>
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div>
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div>
+                        <h2></h2>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <!-- Row 4 -->
+                <div>
+                   <div>
+                    <h2></h2>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                   </div>
+                   <div>
+                    <h2></h2>
+                    <a href=""></a>
+                    <a href=""></a>
+                   </div>
+                   <!-- Heading & Icon -->
+                  <div>
+                    <h1></h1>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                  </div>
+                  <!-- Heading & Para (Address) -->
+                  <h2></h2>
+                  <p></p>
+                  <!-- Copyright -->
+                  <p></p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 
