@@ -12,3 +12,8 @@ if('group' in people){
 else{
     console.log('not present');
 }
+// for-of loop use for convert function into array
+
+for(let key in Object.entries(people)){
+    console.log(key);
+}
