@@ -21,3 +21,14 @@ let t4 = performance.now();
 
 console.log("time taken " + (t4-t3 ) + ' ms');
 
+// optimisize Second
+let t5 = performance.now();
+let fragment = document.createDocumentFragment();
+for(let i = 1; i <= 500; i++){
+    let para = document.createElement('p');
+    para.textContent = 'I am the Para' + 1;
+    fragment.appendChild(para);
+}
+document.body.appendChild(fragment);
+let t6 = performance.now();
+console.log("time taken " + (t6-t5 ) + ' ms');
