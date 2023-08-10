@@ -83,7 +83,7 @@ function shufflePassword(array) {
     return str;
 
 }
-
+// Copy Button
 async function copyContent() {
     try {
         await navigator.clipboard.writeText(displayPassword.value);
@@ -94,10 +94,10 @@ async function copyContent() {
         dataCopyMsg.innerText = "NOT COPY";
     }
 
-    dataCopyMsg.classList.add('active');
+    dataCopyMsg.classList.add("active");
 
     setTimeout(() => {
-        dataCopyMsg.classList.remove('active');
+        dataCopyMsg.classList.remove("active");
     }, 2000);
 }
 
