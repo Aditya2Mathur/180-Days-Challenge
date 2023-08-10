@@ -5,15 +5,15 @@ const dataLengthNumber = document.querySelector("[data-lengthNumber]");
 const inputSlider = document.querySelector("[data-lengthSlider]");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateBtn");
-const uppercase = document.querySelector("#uppercase");
-const lowercase = document.querySelector("#lowercase");
-const number = document.querySelector("#number");
-const symbol = document.querySelector("#symbol");
+const uppercaseCheck = document.querySelector("#uppercase");
+const lowercaseCheck = document.querySelector("#lowercase");
+const numberCheck = document.querySelector("#number");
+const symbolCheck = document.querySelector("#symbol");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
 let password = " ";
-let passwordLength = 2;
-let checkCount = 1;
+let passwordLength = 12;
+let checkCount = 0;
 
 handleSlider();
 
@@ -24,19 +24,19 @@ function handleSlider() {
 
 function setIndicator(color) {
     indicator.style.backgroundcolor = color;
-    indicator.style.boxShadow = "10px 20px 30px blue";
+    // indicator.style.boxShadow = "10px 20px 30px blue";
 }
 
 function genRandomInteger(min, max) {
-    Math.floor(Math.random() * (max - min)) + min;
+   return  Math.floor(Math.random() * (max - min)) + min;
 }
 
-function generateInteger() {
+function generateRandomNumber() {
     return genRandomInteger(0, 9);
 }
 
 function generateUpparcase() {
-    return String.fromCharCode(genRandomInteger(65, 9));
+    return String.fromCharCode(genRandomInteger(65, 91));
 }
 
 function generateLowercase() {
@@ -44,7 +44,7 @@ function generateLowercase() {
 }
 
 function generateSymbol() {
-    return String.fromCharCode(genRandomInteger(33, 47));
+    return String.fromCharCode(genRandomInteger(33, 42));
 }
 
 
@@ -58,10 +58,130 @@ function calcStrength() {
     if (numberCheck.checked) hasNum = true;
     if (symbolCheck.checked) hasSym = true;
 
-    if(hasLower && hasUppar && (hasNum || hasSym) && passwordLength >= 8){
-        setIndicator()
+    if (hasUppar && hasLower && (hasNum || hasSym) && passwordLength >= 8) {
+        setIndicator("#000")
     }
-    else if(
-        (hasLower || hasUppar )
-    )
+    else if ((hasLower || hasUppar) && (hasNum || hasSym) && passwordLength >= 6) {
+        setIndicator("#ff0");
+    }
+    //  day - 38
+    else {
+        setIndicator("#ff0");
+    }
 }
+
+function shufflePassword(array) {
+    // Fisher Yates method 
+    for (let i = Array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = Array[i];
+        Array[i] = Array[j];
+        Array[j] = Array[temp];
+    }
+    let str = "";
+    array.forEach((el) => (str += el));
+    return str;
+
+}
+
+async function copyContent() {
+    try {
+        await navigator.clipboard.writeText(displayPassword.value);
+        dataCopyMsg.innerText = "COPIED";
+
+    }
+    catch (e) {
+        dataCopyMsg.innerText = "NOT COPY";
+    }
+
+    dataCopyMsg.classList.add('active');
+
+    setTimeout(() => {
+        dataCopyMsg.classList.remove('active');
+    }, 2000);
+}
+
+// eventListener'
+
+function handleCheckBoxChange() {
+    checkCount = 0;
+    allCheckBox.forEach((checkBox) => {
+        if (checkBox.checked)
+            checkCount++;
+    })
+
+    if (passwordLength < checkCount) {
+        passwordLength = checkCount;
+        handleSlider();
+    }
+}
+allCheckBox.forEach((checkBox) => {
+    checkBox.addEventListener('change', handleCheckBoxChange);
+})
+
+inputSlider.addEventListener('input', (e) => {
+    passwordLength = e.target.value;
+    handleSlider();
+})
+
+copyBtn.addEventListener('click', () => {
+    if (displayPassword.value > 0) {
+        copyContent();
+    }
+})
+
+// copyBtn.addEventListener('click', () => {
+//     if(displayPassword.value)
+//         copyContent();
+// })
+generateBtn.addEventListener('click', () => {
+    if (checkCount == 0) {
+        return;
+    };
+
+    if (passwordLength < checkCount) {
+        passwordLength = checkCount;
+        handleSlider();
+    };
+    // Start Password 
+    console.log('Starting');
+    password = "";
+
+    // checked password length is not zero
+    let functionArray = [];
+
+    if(uppercaseCheck.checked) 
+        functionArray.push(generateUpparcase);
+
+    if(lowercaseCheck.checked) {
+        functionArray.push(generateLowercase);
+    }
+    if(numberCheck.checked) {
+        functionArray.push(generateRandomNumber);
+    }
+    if(symbolCheck.checked) {
+        functionArray.push(generateSymbol);
+    }
+
+    for (let i = 0; i < functionArray.length; i++) {
+        password += functionArray[i]();
+    }
+    console.log("Compulsory addition ");
+
+    for(let i=0; i<passwordLength-functionArray.length; i++) {
+        let randIndex = genRandomInteger(0 , functionArray.length);
+        console.log("randIndex" + randIndex);
+        password += functionArray[randIndex]();
+    }functionArray
+    console.log("remaining addition ")
+    // suffle  password
+
+    password = shufflePassword(Array.from(password));
+    console.log('shufflePassword');
+    
+    displayPassword.value = password;
+    console.log("Password showing in display");
+    console.log(password);
+
+    calcStrength();
+});
