@@ -1,7 +1,7 @@
 const displayPassword = document.querySelector("[displayPassword]");
 const copyBtn = document.querySelector("[copyBtn]");
 const dataCopyMsg = document.querySelector("[data-copyMsg]");
-const dataLengthNumber = document.querySelector("[data-lengthNumber]");
+const lengthDisplay = document.querySelector("[data-lengthNumber]");
 const inputSlider = document.querySelector("[data-lengthSlider]");
 const indicator = document.querySelector("[data-indicator]");
 const generateBtn = document.querySelector(".generateBtn");
@@ -12,18 +12,19 @@ const symbolCheck = document.querySelector("#symbol");
 const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 
 let password = " ";
-let passwordLength = 12;
+let passwordLength = 10;
 let checkCount = 0;
-
 handleSlider();
+// set indicator color 
+setIndicator("#ccc")
 
 function handleSlider() {
     inputSlider.value = passwordLength;
-    dataLengthNumber.innerText = passwordLength;
+    lengthDisplay.innerText = passwordLength;
 }
 
 function setIndicator(color) {
-    indicator.style.backgroundcolor = color;
+    indicator.style.backgroundColor = color;
     // indicator.style.boxShadow = "10px 20px 30px blue";
 }
 
@@ -59,14 +60,17 @@ function calcStrength() {
     if (symbolCheck.checked) hasSym = true;
 
     if (hasUppar && hasLower && (hasNum || hasSym) && passwordLength >= 8) {
-        setIndicator("#000")
+        setIndicator("red")
     }
-    else if ((hasLower || hasUppar) && (hasNum || hasSym) && passwordLength >= 6) {
+    else if ((hasLower || hasUppar)
+     && (hasNum || hasSym)
+     && passwordLength >= 6)
+    {
         setIndicator("#ff0");
     }
     //  day - 38
     else {
-        setIndicator("#ff0");
+        setIndicator("green");
     }
 }
 
