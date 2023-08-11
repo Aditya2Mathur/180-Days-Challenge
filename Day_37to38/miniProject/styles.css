@@ -1,0 +1,9 @@
+body{
+    /* background-image: url("bg-img.jpg");
+    object-fit: cover; */
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    
+}
