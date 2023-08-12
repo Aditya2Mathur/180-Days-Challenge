@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#wrapper{
-    
+
+#wrapper {
+
     height: 100vh;
     perspective: 10px;
     width: auto;
@@ -12,7 +13,7 @@
     overflow-y: auto;
 }
 
-.container{
+.container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -21,20 +22,40 @@
     transform-style: preserve-3d;
 
 }
-.background,.foreground{
-position: absolute;
-height: 100%;
-width: 100%;
-z-index: -1px;
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -5px;
 }
-.background{
-    transform: translateZ(-50px); scale: 6;
+
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2px;
 }
-.foreground{
-    transform: translateZ(-20px); scale: 3;
+
+.background {
+    transform: translateZ(-50px);
+    scale: 6;
 }
-.text{
+
+.foreground {
+    transform: translateZ(-20px);
+    scale: 3;
+}
+
+.text {
     color: wheat;
     position: absolute;
     top: 30;
+}
+
+.heading {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    z-index: -4px;
 }
