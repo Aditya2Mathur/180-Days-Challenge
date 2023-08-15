@@ -104,9 +104,9 @@ function renderWeatherInfo(weatherInfo) {
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
     temp.innerText = weatherInfo?.main?.temp;
-    windspeed.innerText = weatherInfo?.wind?.speed;
-    humidity.innerText = weatherInfo?.main?.humidity;
-    cloudiness.innerText = weatherInfo?.clouds?.all;
+    windspeed.innerText =  `${weatherInfo?.wind?.speed} m/s`;
+    humidity.innerText = `${weatherInfo?.main?.humidity} %`;
+    cloudiness.innerText = `${weatherInfo?.clouds?.all} %`;
 
 
 }
