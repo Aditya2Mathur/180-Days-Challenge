@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap');
+        </style>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <div class="wrapper">
 
-        <h1>Weather App</h1>
+        <h1 id="heading-top">Weather App</h1>
 
         <div class="tab-container">
             <p class="tab" data-userWeather>Your Weather</p>
@@ -21,18 +24,19 @@
         <div class="weather-container">
 
             <!-- grant location container-->
-            <div class="grant-location-container">
+            <div class="grant-location-container grant-container">
                 <img src="images/location.png" width="80" height="80" loading="lazy">
-                <p>grant Location Access</p>
-                <p>Allow Access to get weather Information</p>
+                <p class="gla">grant Location Access</p>
+                <p class="para">Allow Access to get weather Information</p>
                 <button class="btn" data-grantAccess>Grant Access</button>
             </div>
 
             <!-- search form -> form-container-->
-            <form class="form-container" data-searchForm>
-                <input placeholder="Search for City..." data-searchInput>
-                <button class="btn" type="submit">
-                    <img src="images/search.png"  width="20" height="20" loading="lazy">
+            <form class="form-container search-box" data-searchForm>
+                <input placeholder="Search City..." class="search-txt"
+                name="search"  required data-searchInput>
+                <button class="btn" type="submit" >
+                    <img src="images/search.png" class="search-btn" loading="lazy">
                 </button>
             </form>
 
@@ -52,11 +56,11 @@
                 </div>
 
                 <!-- weather descriptuion-->
-                <p data-weatherDesc></p>
+                <p data-weatherDesc class="weather-desc"></p>
                 <!--weather Icon-->
-                <img data-weatherIcon>
+                <img data-weatherIcon class="weather-icon">
                 <!--temperature-->
-                <p data-temp></p>
+                <p class="temp"><span data-temp></span> °C</p>
 
                 <!--3 cards - parameters-->
                 <div class="parameter-container">
@@ -64,21 +68,21 @@
                     <!--card 1-->
                     <div class="parameter">
                         <img src="images/wind.png" >
-                        <p>windspeed</p>
-                        <p data-windspeed></p>
+                        <p class="para-detail">Windspeed</p>
+                        <p data-windspeed> <span>m/s</span></p>
                     </div>
 
                     <!--card 2-->
                     <div class="parameter">
                         <img src="images/humidity.png" >
-                        <p>humidity</p>
+                        <p class="para-detail">Humidity</p>
                         <p data-humidity></p>
                     </div>
 
                     <!--card 3-->
                     <div class="parameter">
                         <img src="images/cloud.png" >
-                        <p>Clouds</p>
+                        <p class="para-detail">Clouds</p>
                         <p data-cloudiness></p>
                     </div>
 
