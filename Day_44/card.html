@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+</head>
+<style>
+   .card{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    border: 1px solid black;
+   }
+   .card:hover{
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.362);
+   }
+   #img1{
+    height: 40%;
+    width: 100%;
+    border-top: 10px solid transparent;
+    object-fit:fill;
+    padding-top: 5px; 
+   }
+   .card-heading{
+    color: black;
+    font-weight: 400;
+   }
+   .content{
+    padding-left: 10px;
+   }
+   .fee{
+    color: #8E7AE7;
+    font-size: 1.1rem;
+   }
+</style>
+<body>
+    <div class="card">
+        <img src="pexels-wadim-ł-17926548.jpg" alt="" id="img1">
+        <div class="content">
+        <h3 class="card-heading">Web Development Bootcamp</h3>
+        <p style="color: #bcbfbf;">2 Course</p>
+        <p class="fee"> <s>₹8,999</s> ₹4500</p>
+        </div>
+    </div>
+    
+</body>
+</html>
