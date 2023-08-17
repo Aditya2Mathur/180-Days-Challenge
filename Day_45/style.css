@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --color-primary: #2ebdff;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+    background: rgb(51,221,255);
+background: linear-gradient(159deg, rgba(51,221,255,1) 0%, rgba(255,251,251,1) 49%, rgba(62,61,191,1) 100%);
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Euclid Circular A";
+    background: #f9f9f9;
+    color: #f9f9f9;
+  }
+  
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    background: #17181a;
+    width: 100%;
+  }
+
+  .navbar h1 {
+    display: none;
+    flex: 2 1 auto;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 0 16px;
+  }
+  
+  @media (width >= 440px) {
+    .navbar {
+      top: 0;
+      bottom: auto;
+    }
+  
+    .tabs {
+      scale: 0.8;
+      width: 200px;
+    }
+  
+    .navbar h1 {
+      display: block;
+    }
+  }
+  
+  .tabs {
+    flex: 1 1 auto;
+  }
+  
+  .tabs > input {
+    display: none;
+  }
+  
+  h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  label {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    font-size: 15px;
+    flex: 1 1 auto;
+    min-width: 58px;
+    opacity: 0.35;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .buttons {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+  }
+  a{
+    text-decoration: none;
+    z-index: 1;
+    left: 0;
+    width: 25%;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: 1.1111rem;
+    margin: 0 0 0 16px;
+    
+    color: #ccc;
+  }
+  a:hover{
+    color: rgb(51, 221, 255);
+    scale: 1.1;
+    border-radius: 1rem;
+    
+    text-shadow: 4px 4px 4px  rgb(255, 255, 255);
+  }
+  .underline {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: -3px;
+    width: 25%;
+    display: grid;
+    place-items: center;
+    transition: 0.3s;
+  }
+  
+
+  /* main CSS */
+.main-body{
+  height: 95%;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  background-position: center;
+}
+.game-info{
+  color: white;
+  border-radius: 1rem;
+  border: 1px solid #2ebdff;
+  padding: 0.5rem 3rem;
+  background-color: rgba(184, 172, 172, 0.405);
+
+}
+
+  .tic-tac{
+    display: grid;
+    border: 1px solid rgb(75, 75, 75);
+    width: 90%;
+    max-width: 20rem;
+    background-color: #aeadad43;
+    grid-template-columns: repeat(3, 1fr);
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    
+  }
+  .box{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 2.9rem;
+    
+  }
+  .box1, .box2, .box3, .box4, .box5, .box6{
+    border-bottom: 1px solid black;
+  }
+  .box1, .box2, .box4, .box5{
+    border-right: 1px solid black;
+  }
+  .box7, .box8{
+    border-right: 1px solid black;
+  }
+/* Reset Button */
+button {
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
