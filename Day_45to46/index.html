@@ -11,21 +11,28 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
+<style>
+    .bg-pan-left{animation:bg-pan-left 8s both}
+    @keyframes bg-pan-left{0%{background-position:100% 50%}100%{background-position:0 50%}}
+
+    .text-focus-in{animation:text-focus-in 0.7s cubic-bezier(.55,.085,.68,.53) both}
+    @keyframes text-focus-in{0%{filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
+</style>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper bg-pan-left">
         <nav class="navbar">
-            <h1>Tic Tac Toe</h1>
+            <h1 class="text-focus-in">Tic Tac Toe</h1>
             <div class="tabs">
-                <div class="buttons">
-                    <a href=""> HOME </a>
+                <div class="buttons text-focus-in">
+                    <a href="" class=""> HOME </a>
                     <a href="">Password Generator</a>
                     <a href="">Weather App</a>
                     <div class="underline"></div>
                 </div>
         </nav>
         <div class="main-body">
-            <p class="game-info animate__animated animate__bounce"></p>
+            <p class="game-info text-focus-in"></p>
             <div class="tic-tac">
                 <div class="box1 box"></div>
                 <div class="box2 box"></div>
