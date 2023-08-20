@@ -1,0 +1,10 @@
+.Name{
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+}
+.name-div{
+    text-align: center;
+    background-color: lightsteelblue;
+    margin: 10px;
+}
