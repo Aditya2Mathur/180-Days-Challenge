@@ -33,11 +33,11 @@ const App = () => {
   
 
   return (
-    <div className="min-h-screen flex flex-col bg-bgDark2">
-      <div>
-        <Navbar/>
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500">
+      <div >
+        <Navbar  />
       </div>
-      <div className="bg-bgDark2">
+      <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
         <div>
           <Filter 
           filterData={filterData}
