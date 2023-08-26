@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Card from "./Card";
 import { FaBackward, FaForward } from 'react-icons/fa6';
+import "./Card"
 
 
 const Testimonial = (props) => {
@@ -24,7 +25,7 @@ const Testimonial = (props) => {
         }
     }
     return (
-        <div className="w-[400px] h-[500px  ] bg-slate-700 rounded-lg mt-10 p-10  bg-fixed">
+        <div className="w-[400px] h-[500px] bg-slate-700 rounded-lg mt-10 p-10  bg-fixed">
             <Card reviews={reviews[index]}></Card>
             <div className=" flex justify-center items-center text-[#0f172a] mt-7 gap-4">
                 <button > <FaBackward onClick={leftSideHandler}/> </button>

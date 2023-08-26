@@ -1,0 +1,12 @@
+@media screen and (max-width: 400px) {
+    .respon {
+     
+      margin-top: 24vh;
+    }
+  }
+@media screen and (min-width: 281px) {
+  .bodyApp{
+    width: 100vw;
+    height: 100%;
+  }
+  }
