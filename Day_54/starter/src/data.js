@@ -9,7 +9,7 @@ const reviews = [
   {
     id: 2,
     name: "Asif Ansari",
-    job: "Graphic Designer",
+    job: "PHP Developer",
     image: "https://media.licdn.com/dms/image/D5635AQGqZ7dr63Cfyg/profile-framedphoto-shrink_800_800/0/1674555984242?e=1693663200&v=beta&t=PEx7SruNd77tHdmSx85k3bOH6199uT1bZDe6pGLv4eY",
     text: "I have been working with this company for several years now, and I have always been impressed with their creativity and attention to detail. They are true professionals who take pride in their work and always go above and beyond to deliver exceptional results.",
   },
