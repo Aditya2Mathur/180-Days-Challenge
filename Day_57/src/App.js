@@ -1,13 +1,40 @@
+import { NavLink, Routes } from "react-router-dom";
 import "./App.css";
+import { Route} from "react-router-dom"
+import About from "./components/About";
+import Home from "./components/Home";
+import Gallery from "./components/Gallery"
+import Contact from "./components/Contact"
+import NotFound from "./components/NotFound";
+import { MainHeader } from "./components/MainHeader";
 
 function App() {
   return (
-    <main class="flex justify-center gap-4 flex-col min-h-screen">
-      <h1 class="text-3xl text-center font-bold underline">React & Tailwind CSS Starter Pack</h1>
-      <p class="text-center text-xl">This is a starter pack for React & Tailwind CSS projects.</p>
-      <img src="https://bit.ly/3wsmzTy" alt="meme" class="mx-auto" />
-    </main>
+    <div>
+      <nav >
+        <ul >
+          <li className="">
+            <NavLink to="/" >Home</NavLink>
+            </li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+            <li><NavLink to="/gallery">Gallery</NavLink></li>
+            
+          
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<MainHeader/>}>
+        <Route index element={<Home/> }/>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/gallery" element={<Gallery/>}></Route>
+        <Route path="/*" element={<NotFound/>}></Route>
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
 export default App;
+ 

@@ -24,7 +24,7 @@ function App() {
   }
   return (
     <div className=" flex justify-center w-[100%]">
-      <form onSubmit={submitHandler} className="flex flex-col items-start gap-1 border w-[50%] border-black h-[100%] w-96" auto >
+      <form onSubmit={submitHandler} className="flex flex-col items-start gap-1 border w-[50%] border-black h-[100%]" auto >
         <div className="flex flex-col w-[100%]">
           <label htmlFor="firstName" className=" text-[1rem] font-bold border-black">First Name : </label>
           <input

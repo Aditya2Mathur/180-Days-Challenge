@@ -1,1 +1,8 @@
 /* write your css here */
+.active{
+    color: lightseagreen ;
+    
+}
+.active:hover{
+    scale: 1.1;
+}
