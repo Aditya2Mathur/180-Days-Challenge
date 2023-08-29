@@ -2,10 +2,11 @@ import "./App.css";
 import { useState } from 'react'
 
 function App() {
-  const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "", city: "", country: "", State: "", ZIP: "",
-   comment: false, street:"", candidates: false, Offer: false, all:"",
-   });
-   function changeHandler(event) {
+  const [formData, setFormData] = useState({
+    firstName: "", lastName: "", email: "", city: "", country: "", State: "", ZIP: "",
+    comment: false, street: "", candidates: false, Offer: false, all: "",
+  });
+  function changeHandler(event) {
     const { name, value, checked, type } = event.target
     setFormData(prevFormData => {
       return {
@@ -15,19 +16,19 @@ function App() {
     })
   }
   ;
-  function submitHandler(event){
+  function submitHandler(event) {
     event.preventDefault()
     console.log("Your Detail in Object Form")
     console.log(formData)
     alert("Check Your Detail in Console");
   }
   return (
-    <div>
-      <form onSubmit={submitHandler} className="flex flex-col" auto >
-        <div>
-          <label htmlFor="firstName" className=" border-black">First Name : </label>
+    <div className=" flex justify-center w-[100%]">
+      <form onSubmit={submitHandler} className="flex flex-col items-start gap-1 border w-[50%] border-black h-[100%] w-96" auto >
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="firstName" className=" text-[1rem] font-bold border-black">First Name : </label>
           <input
-            className="border-4 border-gray-950"
+            className="border-2 border-gray-950"
             type="text"
             placeholder="Aditya..."
             onChange={changeHandler}
@@ -36,8 +37,12 @@ function App() {
             autoComplete="name"
             value={formData.firstName}
           />
-          <label htmlFor="lastName">Last Name : </label>
+        </div>
+
+        <div className="flex flex-col w-[100%]">
+          <label className="text-[15px] font-bold" htmlFor="lastName">Last Name : </label>
           <input
+            className="border-2 border-gray-950"
             type="text"
             placeholder="Mathur..."
             onChange={changeHandler}
@@ -47,21 +52,24 @@ function App() {
             value={formData.lastName}
           />
         </div>
-        <div>
-        <label htmlFor="email">Email </label>
+
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="email" className="text-[15px] font-bold">Email </label>
           <input
+            className="border-2  border-gray-950"
             type="email"
             placeholder="ingo@adi.com..."
-            onChange={changeHandler} 
+            onChange={changeHandler}
             name="email"
             id="email"
             autoComplete="email"
             value={formData.email}
           />
         </div>
-        <div>
-          <label htmlFor="street">Street Address</label>
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="street" className="text-[15px] font-bold">Street Address</label>
           <input
+            className="border-2  border-gray-950"
             type="text"
             placeholder="Gali No. 4...."
             onChange={changeHandler}
@@ -72,9 +80,10 @@ function App() {
         </div>
 
 
-        <div>
-          <label htmlFor="city">City</label>
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="city" className="text-[15px] font-bold">City</label>
           <input
+            className="border-2  border-gray-950"
             type="text"
             placeholder="Ghaziabad"
             onChange={changeHandler}
@@ -84,9 +93,10 @@ function App() {
           />
         </div>
 
-        <div>
-          <label htmlFor="State">State/Province</label>
+        <div className="flex flex-col w-[100%]"> 
+          <label htmlFor="State" className="text-[15px] font-bold">State/Province</label>
           <input
+            className="border-2  border-gray-950"
             type="text"
             placeholder="Uttar Pradesh"
             onChange={changeHandler}
@@ -97,9 +107,10 @@ function App() {
         </div>
 
 
-        <div>
-        <label htmlFor="country">country</label>
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="country" className="text-[15px] font-bold">country</label>
           <select name="country"
+            className="border-2  border-gray-950"
             id="country"
             autoComplete="country"
             value={formData.country}
@@ -112,9 +123,10 @@ function App() {
           </select>
         </div>
 
-        <div>
-          <label htmlFor="ZIP">ZIP/ Postel Code</label>
+        <div className="flex flex-col w-[100%]">
+          <label htmlFor="ZIP" className="text-[15px] font-bold">ZIP/ Postel Code</label>
           <input
+            className="border-2  border-gray-950"
             type="number"
             placeholder="201309"
             onChange={changeHandler}
@@ -125,80 +137,90 @@ function App() {
         </div>
 
         {/* By Email Start / checkbox Section */}
+        <p className="text-[15px] font-bold">My Email</p>
+        <div className="flex flex-col w-[100%]">
+          <div className="flex">
+            <input
+              type="checkbox"
+              onChange={changeHandler}
+              name="comment"
+              id="comment"
+              checked={formData.comment}
+            />
 
-        <div>
-          <p>My Email</p>
-          <br />
+            <label htmlFor="comment" className="text-[15px] font-bold">
+              Comments
+            </label>
+          </div>
+          <p className="ml-3">Get notified when someones posts a comment on a posting.</p>
 
-          <input
-            type="checkbox"
-            onChange={changeHandler}
-            name="comment"
-            id="comment"
-            checked={formData.comment}
-          />
-          <label htmlFor="comment">
-            <h4>Comments</h4>
-            <p>Get notified when someones posts a comment on a posting.</p>
-          </label>
-
-          
-          <br />
-
-          <input
-            type="checkbox"
-            onChange={changeHandler}
-            name="candidates"
-            id="candidates"
-            checked={formData.candidates}
-          />
-          <label htmlFor="candidates">
-            <h4>Candidates</h4>
-            <p>Get notified when a candidate applies for a job.</p>
-          </label>
 
           <br />
 
-          <input
-            type="checkbox"
-            onChange={changeHandler}
-            name="Offer"
-            id="Offer"
-            checked={formData.Offer}
-          />
-          <label htmlFor="candidates">
-            <h4>Offer</h4>
-            <p>Get notified when a candidate applies for a job.</p>
-          </label>
+          <div className="flex ">
+            <input
+              type="checkbox"
+              onChange={changeHandler}
+              name="candidates"
+              id="candidates"
+              checked={formData.candidates}
+            />
+            <label htmlFor="candidates" className="text-[15px] font-bold">
+              <h4>Candidates</h4>
 
+            </label>
+          </div>
+          <p className="ml-3">Get notified when a candidate applies for a job.</p>
+          <br />
+
+          <div className="flex">
+            <input
+              type="checkbox"
+              onChange={changeHandler}
+              name="Offer"
+              id="Offer"
+              checked={formData.Offer}
+            />
+            <label htmlFor="candidates" className="text-[15px] font-bold">
+              <h4>Offer</h4>
+
+            </label>
+          </div>
+          <p className="ml-3">Get notified when a candidate applies for a job.</p>
 
         </div>
 
         <div>
-          <h4>Push Notificatios</h4>
+          <h4 className="text-[15px] font-bold">Push Notificatios</h4>
           <p>These are delivered via SMS to your mobile phone.</p>
         </div>
         <div>
 
-          <input
-            type="radio"
-            onChange={changeHandler}
-            name="all"
-            value="everything"
-            id="everything"
-            checked={formData.all === "everything"}
-          />
-          <label htmlFor="everything"> Everything</label>
+          <div>
+            <input
+              type="radio"
+              onChange={changeHandler}
+              name="all"
+              value="everything"
+              id="everything"
+              checked={formData.all === "everything"}
+            />
+            <label htmlFor="everything" className="text-[15px] font-bold"> Everything</label>
+          </div>
+          <div>
 
-          <input
-            type="radio"
-            onChange={changeHandler}
-            name="all"
-            value="SaE"
-            id="SaE"
-            checked={formData.all === "SaE"}
-          />
-          <label htmlFor="SaE"> Same As Email</label>
+           <div>
+           <input
+              type="radio"
+              onChange={changeHandler}
+              name="all"
+              value="SaE"
+              id="SaE"
+              checked={formData.all === "SaE"}
+            />
+            <label htmlFor="SaE" className="text-[15px] font-bold"> Same As Email</label>
+           </div>
+          </div>
 
           <input
             type="radio"
@@ -208,10 +230,10 @@ function App() {
             id="NPN"
             checked={formData.all === "NPM"}
           />
-          <label htmlFor="NPN"> No Push Notificatios</label>
+          <label htmlFor="NPN" className="text-[15px] font-bold"> No Push Notificatios</label>
         </div>
         <div>
-        <button type="submit">Submit</button>
+          <button className="border-2 border-blue-600  rounded-lg px-3 py-1 text-blue-400 cursor-pointer hover:bg-blue-600 hover:text-blue-200" type="submit">Submit</button>
         </div>
       </form>
     </div>
