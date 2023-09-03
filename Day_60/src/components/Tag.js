@@ -20,7 +20,7 @@ const Tag = () => {
       <h1 className='mt-[15px] text-2xl underline uppercase font-bold'> Random {tag} Gif</h1>
 
     {
-        loading ? (<Spinner/>) : (<img src= {gif} width="450" className=' w-max-[450px]' />)
+        loading ? (<Spinner/>) : (<img src= {gif} width="450" className=' h-max-[450px]' />)
     }
 
       <input 
